@@ -15,7 +15,7 @@ Before starting, all my Shopify developments are based in the **Debut** template
 
 Developments
 ------
-1. **Banner with mobile specific image and text alignment** - [Go to project](https://www.google.com/)
+1. **Banner with mobile specific image and text alignment** - [Go to project](/tree/master/banner/banner w mobile img)
 2. **next** - [project](#)
 
 ------
