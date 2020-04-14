@@ -24,14 +24,14 @@ How to install
 ------
 
 ###Adding Banner
-1. Click [banner]() and copy all the text
+1. Click [banner](https://github.com/taftera/shopify/blob/master/banner/banner%20w%20mobile%20img/section/banner.liquid) and copy all the text
 2. Enter **Online Store** > **Actions** > **Edit Code**
 3. Under **Section** > Click **Add a new section**
 4. Rename it how you want it.
 5. Paste all the text
 
 ###Adding SVG Arrow "→" to button
-1. Click [btn_arrow]() and copy all the text
+1. Click [btn_arrow](https://github.com/taftera/shopify/blob/master/banner/banner%20w%20mobile%20img/snippets/btn_arrow.svg.liquid) and copy all the text
 2. Enter **Online Store** > **Actions** > **Edit Code**
 3. Under **Snippets** > Click **Add a new snippet**
 4. Name it "**btn_arrow.svg**" (anything else will not work).
