@@ -13,7 +13,15 @@ Before starting, all my Shopify developments are based in the **Debut** template
 
 ------
 
-If you found this repository helpful, and wish to help out. A donation is a great way for me to keep going at it.
+Developments
+------
+1. **Banner with mobile specific image and text alignment** - [Go to project](https://www.google.com/)
+2. **next** - [project](#)
+
+------
+
+If you found this repository helpful, and wish to help out, send me a message [@taftera](https://twitter.com/TafterA)
+Or a donation is a great way to help me to keep going at it.
 
 [![Donate with PayPal](https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GL9YU5ATGF6E2&currency_code=USD&source=url)
 
