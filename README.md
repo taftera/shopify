@@ -15,4 +15,5 @@ Before starting, all my Shopify developments are based in the **Debut** template
 
 If you found this repository helpful, and wish to help out. A donation is a great way for me to keep going at it.
 
-[![Donate with PayPal](https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif "")](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GL9YU5ATGF6E2&currency_code=USD&source=url)
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GL9YU5ATGF6E2&currency_code=USD&source=url)
+![QR Code](https://raw.githubusercontent.com/taftera/shopify/master/QR%20Code.png)
