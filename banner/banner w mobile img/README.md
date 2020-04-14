@@ -15,11 +15,11 @@ I used **hero.liquid** as base (2020-03)
 
 You'll see a few extra options:
 
-⋅⋅⋅checkbox > "Enable Mobile Banner"
-⋅⋅⋅image picker > "Mobile Image"
-⋅⋅⋅checkbox > "Add →"
-⋅⋅⋅select > "Text Alignment"
-⋅⋅⋅range > "Margin Bottom"
++ checkbox > "Enable Mobile Banner"
++ image picker > "Mobile Image"
++ checkbox > "Add →"
++ select > "Text Alignment"
++ range > "Margin Bottom"
 
 How to install
 ------
