@@ -21,6 +21,7 @@ Developments
 ------
 
 If you found this repository helpful, and wish to help out, send me a message [@taftera](https://twitter.com/TafterA)
+
 Or a donation is a great way to help me to keep going at it.
 
 [![Donate with PayPal](https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GL9YU5ATGF6E2&currency_code=USD&source=url)
