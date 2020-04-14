@@ -1,4 +1,4 @@
-#Shopify Help
+Shopify Help
 ======
 
 Banner with mobile specific image
