@@ -1,7 +1,4 @@
-Shopify Help
-======
-
-Banner with mobile specific image
+Banner with mobile specific image | Shopify Help
 ------
 
 Usually when I develop, many of the banners we use aren't the same when people use their phones. I don't know why it hasn't been pre-installed but this is a life saver.
