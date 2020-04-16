@@ -16,7 +16,7 @@ Before starting, all my Shopify developments are based in the **Debut** template
 Developments
 ------
 1. **Banner with mobile specific image and text alignment** - [Go to project](https://github.com/taftera/shopify/tree/master/banner/banner%20w%20mobile%20img)
-2. **next** - [project](#)
+2. **Testimonials with Profile Image** - [Go to project](https://github.com/taftera/shopify/tree/master/testimonials/testimonials%20w%20image)
 
 ------
 
