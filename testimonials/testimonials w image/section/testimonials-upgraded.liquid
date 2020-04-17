@@ -8,10 +8,11 @@
         <ul class="slides">
           {% for block in section.blocks %}
             <li class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }} data-block-id="{{block.id}}">
-              <div class="testimonial-block" style="display:flex; align-items:center; flex-direction:row{% if block.settings.side_image == 'right' %}-reverse{% endif %} text-align: {{ block.settings.text_alignment }};">
+              <div class="testimonial-block" style="display:flex; align-items:center; text-align:{{ block.settings.text_alignment }};
+                                                    flex-direction:{% if block.settings.side_image == 'center' %}column{% endif %}{% if block.settings.side_image == 'left' or block.settings.side_image == 'right' %}row{% if block.settings.side_image == 'right' %}-reverse{% endif %}{% endif %};">
 {% if block.settings.image_enable %}
   <div>
-  <img src="{{ block.settings.testimonial_img | img_url: 'x300' }}" alt="{{ block.settings.name }}" style="border-radius: {{ block.settings.img_corner }}px;" />
+  <img src="{{ block.settings.testimonial_img | img_url: 'x300' }}" alt="{{ block.settings.name }}" style="border-radius: {{ block.settings.img_corner }}px; height:{{ block.settings.img_size }}px; width:{{ block.settings.img_size }}px;" />
   </div>
 {% endif %}
                 <div>
@@ -56,6 +57,7 @@
     </div>
   {% endif %}
 </div>
+
 
 {% schema %}
   {
@@ -123,6 +125,27 @@
 },
 {
     "type": "range",
+    "id": "img_size",
+    "min": 100,
+    "max": 300,
+    "step": 10,
+    "unit": "px",
+    "label": "Image size",
+    "default": 100
+},
+{
+   "type": "radio",
+   "id": "side_image",
+   "label": "Which side do you want the image displayed ?",
+   "options": [
+     { "value": "left", "label": "Left" },
+     { "value": "center", "label": "Center" },
+     { "value": "right", "label": "Right" }
+   ],
+   "default": "center"
+},
+{
+    "type": "range",
     "id": "img_corner",
     "min": 0,
     "max": 150,
@@ -133,21 +156,11 @@
 },
 {
    "type": "radio",
-   "id": "side_image",
-   "label": "Which side do you want the image displayed ?",
-   "options": [
-     { "value": "left", "label": "Left" },
-     { "value": "right", "label": "Right" }
-   ],
-   "default": "left"
-},
-{
-   "type": "radio",
    "id": "text_alignment",
-   "label": "Text Alignment",
+   "label": "Text alignment",
    "options": [
      { "value": "left", "label": "Left" },
-       { "value": "center;", "label": "Center" },
+     { "value": "center", "label": "Center" },
      { "value": "right", "label": "Right" }
    ],
    "default": "center"
