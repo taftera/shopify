@@ -1,44 +1,33 @@
-#Shopify Help
-======
+![Project_02](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/gh-display_02.jpg)
 
-Banner with mobile specific image
+Testimonials with profile image
 ------
 
-Usually when I develop, many of the banners we use aren't the same when people use their phones. I don't know why it hasn't been pre-installed but this is a life saver.
+Well, lets be real, when ever you are on a site searching for reviews for your next trip (screw you COVID-19 !!!) or checking if the new mouse you've been researching is the best. Everyone likes / trust more when they have a profile pic besides their *testimonial*.
 
-Also, I've added a few other configurations, instead of just being able to see text centered, you can displayed it *left* and *right* alignment.
-For this particular development, this section buttons need an arrow "→", therefore I added a SVG file in the snippets by including it.
+This are the few things I don't get from Shopify, they are simple yet easily implementation changes that will help shops sell more.
 
-```{% include 'btn_arrow' %}```
-
-I used **hero.liquid** as base (2020-03)
+I used **testimonial.liquid** as base (2019-03)
 
 You'll see a few extra options:
-⋅⋅⋅ checkbox > "Enable Mobile Banner"
-⋅⋅⋅ image picker > "Mobile Image"
-⋅⋅⋅ checkbox > "Add →"
-⋅⋅⋅ select > "Text Alignment"
-⋅⋅⋅ range > "Margin Bottom"
++ checkbox > "Enable Image in Testimonials"
++ image picker > "Testimonial Image"
++ range > "Round corner"
++ radio > "Side for the image to appear"
++ radio > "Text Alignment"
 
 How to install
 ------
 
 ###Adding Banner
-1. Click [banner]() and copy all the text
+1. Click [testimonial upgraded](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/section/testimonials-upgraded.liquid) and copy all the text
 2. Enter **Online Store** > **Actions** > **Edit Code**
 3. Under **Section** > Click **Add a new section**
 4. Rename it how you want it.
-5. Paste all the text
-
-###Adding SVG Arrow "→" to button
-1. Click [btn_arrow]() and copy all the text
-2. Enter **Online Store** > **Actions** > **Edit Code**
-3. Under **Snippets** > Click **Add a new snippet**
-4. Name it "**btn_arrow.svg**" (anything else will not work).
 5. Paste all the text
 
 Notes
 ------
 If by any chance you cant see the mobile image displayed, double check the "Enable Mobile Banner" it has been a few times I've re-check my code for this simple thing.
 
-Project - [adidas Watches Mexico](https://adidas-watches-mexico.myshopify.com/)
+Project - [Design Supply CO](https://designsupply-co.myshopify.com)
