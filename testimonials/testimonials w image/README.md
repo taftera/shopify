@@ -12,8 +12,9 @@ I used **testimonial.liquid** as base (2019-03)
 You'll see a few extra options:
 + checkbox > "Enable Image in Testimonials"
 + image picker > "Testimonial Image"
-+ range > "Round corner"
++ range > "Image Size"
 + radio > "Side for the image to appear"
++ range > "Round corner"
 + radio > "Text Alignment"
 
 How to install
@@ -28,6 +29,6 @@ How to install
 
 Notes
 ------
-If by any chance you cant see the mobile image displayed, double check the "Enable Mobile Banner" it has been a few times I've re-check my code for this simple thing.
+If by any chance you cant see the image displayed, double check the "Enable Image Testimonials".
 
 Project - [Design Supply CO](https://designsupply-co.myshopify.com)
