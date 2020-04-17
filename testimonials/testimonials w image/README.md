@@ -19,7 +19,7 @@ You'll see a few extra options:
 How to install
 ------
 
-###Adding Banner
+### Adding Testimonial Upgraded
 1. Click [testimonial upgraded](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/section/testimonials-upgraded.liquid) and copy all the text
 2. Enter **Online Store** > **Actions** > **Edit Code**
 3. Under **Section** > Click **Add a new section**
