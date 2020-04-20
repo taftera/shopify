@@ -1,3 +1,65 @@
+<div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="quotes-wrapper">
+      <div class="quotes-slider" id="Quotes-{{ section.id }}" data-count="{{ section.blocks.size }}">
+        {% for block in section.blocks %}
+          <div class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }}>
+            <blockquote class="quotes-slider__text text-center">
+              <div style="display:flex; align-items:center; text-align:{{ block.settings.text_alignment }};
+						  flex-direction:{% if block.settings.side_image == 'center' %}column{% endif %}
+                          {% if block.settings.side_image == 'left' or block.settings.side_image == 'right' %}row{% if block.settings.side_image == 'right' %}-reverse{% endif %}{% endif %};">
+                
+              {% if block.settings.image_enable %}
+                <div {% if block.settings.side_image == 'center' %}style="padding-bottom:10px;"{% endif %}>
+                <img src="{{ block.settings.testimonial_img | img_url: 'x300' }}" alt="{{ block.settings.author }}" style="border-radius: {{ block.settings.img_corner }}px; max-width:none; height:{{ block.settings.img_size }}px; width:{{ block.settings.img_size }}px;" />
+                </div>
+              {% else %}
+              <div class="quote-icon">{% include 'icon-quote' %}</div>
+			  {% endif %}
+                
+              {% if block.settings.quote != blank %}
+                <div class="rte-setting rte">{{ block.settings.quote }}</div>
+              {% endif %}
+                
+			  {% if block.settings.side_image != 'center' %}</div>{% endif %}
+              
+              {% if block.settings.author != blank %}
+                <cite>{{ block.settings.author | escape }}</cite>
+                {% if block.settings.site != blank %}
+              	<small>
+                  {% if block.settings.site_link != blank %}
+                    <a href="{{block.settings.site_link}}" target="_blank">
+                  {% endif %}
+                  {{block.settings.site}}
+                  {% if block.settings.site_link != blank %}
+                    </a>
+                  {% endif %}
+              	</small>
+                {% endif %}
+              {% endif %}
+              
+			  {% if block.settings.side_image == 'center' %}</div>{% endif %}
+            
+            </blockquote>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+
+{% comment %}
 <div class="testimonial-container" data-section-id="{{ section.id }}">
    {% if section.settings.title != blank %}
       <h2 class="title center">{{ section.settings.title}}</h2>
@@ -8,18 +70,17 @@
         <ul class="slides">
           {% for block in section.blocks %}
             <li class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }} data-block-id="{{block.id}}">
-              <div class="testimonial-block" style="display:flex; align-items:center; text-align:{{ block.settings.text_alignment }};
-                                                    flex-direction:{% if block.settings.side_image == 'center' %}column{% endif %}{% if block.settings.side_image == 'left' or block.settings.side_image == 'right' %}row{% if block.settings.side_image == 'right' %}-reverse{% endif %}{% endif %};">
+              <div class="testimonial-block" >
 {% if block.settings.image_enable %}
   <div>
-  <img src="{{ block.settings.testimonial_img | img_url: 'x300' }}" alt="{{ block.settings.name }}" style="border-radius: {{ block.settings.img_corner }}px; height:{{ block.settings.img_size }}px; width:{{ block.settings.img_size }}px;" />
+  <img src="{{ block.settings.testimonial_img | img_url: 'x300' }}" alt="{{ block.settings.author }}" style="border-radius: {{ block.settings.img_corner }}px; height:{{ block.settings.img_size }}px; width:{{ block.settings.img_size }}px;" />
   </div>
 {% endif %}
                 <div>
-                {{block.settings.testimonial}}
-                {% if block.settings.name != blank %}
+                {{ block.settings.quote }}
+                {% if block.settings.author != blank %}
                 <p>
-                  <span class="name">{{ block.settings.name }}</span><br>
+                  <span class="name">{{ block.settings.author }}</span><br>
 
                   {% if block.settings.site_link != blank %}
                     <a href="{{block.settings.site_link}}">
@@ -35,7 +96,7 @@
                 </p>
                 {% else %}
                 <p>
-                {% if block.settings.site_link != blank %}
+                  {% if block.settings.site_link != blank %}
                     <a href="{{block.settings.site_link}}">
                   {% endif %}
 
@@ -57,7 +118,7 @@
     </div>
   {% endif %}
 </div>
-
+{% endcomment %}
 
 {% schema %}
   {
@@ -84,13 +145,13 @@
         "settings": [
           {
             "type": "richtext",
-            "id": "testimonial",
+            "id": "quote",
             "label": "Testimonial",
             "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>"
           },
           {
             "type": "text",
-            "id": "name",
+            "id": "author",
             "label": "Customer name",
             "info": "Optional",
             "default": "John Doe"
