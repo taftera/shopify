@@ -1,4 +1,4 @@
-![Project_02](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/gh-display_02.jpg)
+![Project_02](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/gh-display_02b.jpg)
 
 Testimonials with profile image
 ------
@@ -31,4 +31,8 @@ Notes
 ------
 If by any chance you cant see the image displayed, double check the "Enable Image Testimonials".
 
-Project - [Design Supply CO](https://designsupply-co.myshopify.com)
+Project - [iTouch Mexico](https://itouch-mexico.myshopify.com)
+
+Updates
+------
+2020-04-20 Previous client updated his template.
