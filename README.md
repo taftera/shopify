@@ -18,6 +18,15 @@ Developments
 1. **Banner with mobile specific image and text alignment** - [Go to project](https://github.com/taftera/shopify/tree/master/banner/banner%20w%20mobile%20img)
 2. **Testimonials with Profile Image** - [Go to project](https://github.com/taftera/shopify/tree/master/testimonials/testimonials%20w%20image)
 
+To Do
+------
+1. Tutorial to "import" sections in Product Pages.
+2. "Highlight" banner container w/img and text inserting.
+3. Swipe Gallery for image banner.
+4. Swipe Gallery for products.
+5. Menu update.
+6. Product update with tag reading.
+
 ------
 
 If you found this repository helpful, and wish to help out, send me a message [@taftera](https://twitter.com/TafterA)
