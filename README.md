@@ -26,6 +26,7 @@ To Do
 4. Swipe Gallery for products.
 5. Menu update.
 6. Product update with tag reading.
+7. External Invoice Creator
 
 ------
 
