@@ -20,7 +20,7 @@ Developments
 
 To Do
 ------
-1. Tutorial to "import" sections in Product Pages.
+1. Tutorial to "import" sections in Product page / Blog / Pages.
 2. "Highlight" banner container w/img and text inserting.
 3. Swipe Gallery for image banner.
 4. Swipe Gallery for products.
