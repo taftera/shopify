@@ -4,7 +4,7 @@ Tutorial
 ------
 1. First as always, you need to identify which **SECTION** and where is the code stored. At the bottom I'll create a list of the basic ones on the **Debut** template.
 2. Once you've got the section you are looking for, make a copy of the code and rename it: *name*-*destination*. In my case will be *banner*-page.filetype. Since I've wanted to display a full width / adaptable image in my about page.
-*Note:* due to the -file name- it's impossible to just link the section name to the final destination.
+   - *Note:* due to the -file name- it's impossible to just link the section name to the final destination.
 3. Since we are working with a normal information page, we need to create a specific type of page for it to work. Go to _name_ add page .
 4. When created it will auto-load some basic page code with it's header {{ }} and information {{ }}. Depending on where you want it to be displayed you allocate the following code:
 ```
