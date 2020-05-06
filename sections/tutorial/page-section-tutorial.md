@@ -1,4 +1,4 @@
-# Adding a **SECTION** to an information page
+# Adding a SECTION to an Information Page
 
 Tutorial 
 ------
