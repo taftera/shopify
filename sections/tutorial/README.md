@@ -8,6 +8,6 @@ Since there are slight diferences with each type of page (product page / blog / 
 
 Tutorials 
 ------
-- [Page Section](#)
+- [Page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md)
 - [Product page Section](#)
 - [Blog Section](#)
