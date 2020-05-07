@@ -26,7 +26,7 @@ Tutorial
 
 **Extra note:** If you want to add multiple diferent pages with the same **SECTION**, sadly you'll need to create another copy of the SECTION and repeat the process. Well, until I find a better way.
 
-(Section Location)[https://github.com/taftera/shopify-help/blob/master/sections/tutorial/section-location.md]
+[Section Location](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/section-location.md)
 ------
 In this link you'll find the basic sections and their file location within the Debut theme.
 
