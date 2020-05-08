@@ -8,7 +8,7 @@ Since there are slight diferences with each type of page (product page / blog / 
 
 Tutorials 
 ------
-- ![Project_03-F](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03_f.jpg)
+![Project_03-F](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03_f.jpg)
 - [Page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md)
-- [Product page Section](#)
-- [Blog Section](#)
+- [Product page Section](#) - pending
+- [Blog Section](#) - pending
