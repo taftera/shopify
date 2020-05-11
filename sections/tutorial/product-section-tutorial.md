@@ -34,7 +34,7 @@ Tutorial
 
 5. Go to the admin panel *(HOME)* and click on *Online Store* > Click the **Customize** button.
 
-6. On the top you'll see the name of the template you are working on *Alex Debut - DEV* and right next to it **Home page** with a "▼". Click and scroll for the **Product pages**.
+6. On the top you'll see the name of the template you are working on *Alex Debut - DEV* and right next to it **Home page** with a "▾". Click and scroll for the **Product pages**.
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
 11. **TA-DAAA !** When loaded you'll see that there's the section you linked ! 
