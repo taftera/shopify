@@ -13,7 +13,13 @@ Tutorial
    - **Note:** due to the *settings_data.json* it's impossible to just link the section name to the final destination. Since it will take the variables from the front page edits and apply them to the page in question.
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
-3. This example is a bit easier than the information page, open the *product.liquid* inside the Templates folder. And since we just need to add the code where we want it:
+3. This example is a bit easier than the information page, open the *product.liquid* inside the Templates folder. And since we just need to add the code:
+
+```
+{% section 'highlight-banner-product' %}
+```
+
+Where we want it:
    - Over 'product-template' (beneath the header)
    
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
@@ -23,10 +29,6 @@ Tutorial
    - Or just above the footer (under the other 2 previous sections)
    
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
-
-```
-{% section 'highlight-banner-product' %}
-```
 
 4. **Save**.
 
