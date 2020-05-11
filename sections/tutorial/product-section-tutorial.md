@@ -15,10 +15,13 @@ Tutorial
 
 3. This example is a bit easier than the information page, open the *product.liquid* inside the Templates folder. And since we just need to add the code where we want it:
    - Over 'product-template' (beneath the header)
+   
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
    - Under 'product-template' (beneath the product and over the 'product-recommendation')
+   
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
    - Or just above the footer (under the other 2 previous sections)
+   
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
 
 ```
