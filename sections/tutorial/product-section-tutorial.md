@@ -15,11 +15,11 @@ Tutorial
 
 3. This example is a bit easier than the information page, open the *product.liquid* inside the Templates folder. And since we just need to add the code where we want it:
    - Over 'product-template' (beneath the header)
-   - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
+     - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
    - Under 'product-template' (beneath the product and over the 'product-recommendation')
-   - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
+     - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
    - Or just above the footer (under the other 2 previous sections)
-   - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
+     - ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
 
 ```
 {% section 'highlight-banner-product' %}
@@ -33,7 +33,8 @@ Tutorial
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
 11. **TA-DAAA !** When loaded you'll see that there's the section you linked ! 
-    - **Note:** Sadly product and information pages, can't arrange the sections position (just like I mentioned in **bullet 3**). So if you want to display the highlight banner in a different height, you need to go back to the 
+    - **Note:** Sadly product and information pages, can't arrange the sections position (just like I mentioned in **bullet 3**). So if you want to display the highlight banner in a different height, you need to go back to the *product.liquid*.
+    
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
 [Basic Section Location](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/section-location.md)
