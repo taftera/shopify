@@ -19,7 +19,7 @@ Tutorial
 {% section 'highlight-banner-product' %}
 ```
 
-Where we want it:
+- Where we want it:
    - Over 'product-template' (beneath the header)
    
    ![placeholder](https://via.placeholder.com/460x120.png?text=@taftera+Github+Tutorial)
