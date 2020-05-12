@@ -60,8 +60,9 @@ How to install
 Notes
 ------
 
-SVG Icons by name |
---- | --- | --- | --- | --- | --- |
+
+| First Header  | Second Header | First Header  | Second Header | First Header  | Second Header |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 svg | svg | svg | svg | svg | svg |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
 svg | svg | svg | svg | svg | svg |
