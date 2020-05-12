@@ -60,7 +60,7 @@ How to install
 Notes
 ------
 
-#SVG Catalog (24)
+# SVG Catalog (24)
 
 svg | svg | svg | svg | svg | svg |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
