@@ -59,11 +59,12 @@ How to install
 
 Notes
 ------
-![](h | width=100)
+<img src="https://github.com/favicon.ico" height="24">
 ## SVG Catalog (24)
 
-svg | ![Chat alt](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg | width=100) | svg | svg | svg | svg |
+. | . | . | . | . | . |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+svg | ![Chat alt](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg) | svg | svg | svg | svg |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
 svg | svg | svg | svg | svg | svg |
 Email alt | Gift card | Location | Location alt | Lock closed | Lock open |
