@@ -1,4 +1,4 @@
-[Go to Heading section] (#-this-is-a-heading)
+[Go to Heading section](#-this-is-a-heading)
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
 Highlight Banner with pre-installed SVG icons | Shopify Help by @taftera
