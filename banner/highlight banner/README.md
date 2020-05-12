@@ -7,7 +7,7 @@ Lately, I've seen a lot of Shopify Stores with *highlight banners* they usually 
 
 As well, I had the opportunity of working with a premium template by [Pixel Union](https://pixelunion.net/) which made everything easier. But I had to add my flavor to it.
 
-For this particular development, I needed to have full control of all the 24 SVG icons (made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)) so I added them through a snippet.
+For this particular development, I needed to have full control of all the [24 SVG icons](#svg-catalog-(24)) (made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)) so I added them through a snippet.
 
 ```{% include 'highlight-banner-svg' %}```
 
@@ -21,10 +21,10 @@ You'll see this options in the **highlight-banner** configuration:
   + Padding height
   + Items Color (Both text options)
   + Background Color
-+ DIRECTION CONFI
++ DIRECTION CONFIG
   + Whether you'll like to see the icon and the text side by side (Horizontal) or stacked (vertical)
 
-Inside each block you'll see these configurations:
+Each **block** will contain the next configurations:
 
 + IMAGE / SVG CONFIG
   + Image Select
@@ -59,6 +59,8 @@ How to install
 
 Notes
 ------
+
+#SVG Catalog (24)
 
 svg | svg | svg | svg | svg | svg |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
