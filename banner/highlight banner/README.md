@@ -60,8 +60,6 @@ How to install
 Notes
 ------
 
-
-| First Header  | Second Header | First Header  | Second Header | First Header  | Second Header |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 svg | svg | svg | svg | svg | svg |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
