@@ -17,35 +17,25 @@ This **SECTION** has the basic 2 / 3 / 4 block display configuration from the **
 
 You'll see this options in the **highlight-banner** configuration:
 
-| Reference | Description |
-| --------- | ----------- |
-| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + HIGHLIGHT BANNER CONFIG
   + Padding height
   + Items Color (Both text options)
   + Background Color
 + DIRECTION CONFIG
   + Whether you'll like to see the icon and the text side by side (Horizontal) or stacked (vertical)
-|
 
 Each **block** will contain the next configurations:
 
-| Reference | Description |
-| --------- | ----------- |
-| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + IMAGE / SVG CONFIG
   + Image Select
   + SVG Icon Select
     + SVG Color
-|
-| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + INFORMATION CONFIG
   + Header input
   + Font Size (21px)
   + Font Style (normal / **bold** / *italic*)
   + Support Information input
   + Font Size (13px)
-|
 
 How to install
 ------
