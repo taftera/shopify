@@ -54,7 +54,7 @@ How to install
 1. Click [svg-options](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/snippets/highlight-banner-svg.liquid) and copy all the text
 2. Enter **Online Store** > **Actions** > **Edit Code**
 3. Under **Snippets** > Click **Add a new snippet**
-4. Name it "**highlight-banner-svg.liquid**" (anything else will not work).
+4. Name it "**highlight-banner-svg**" (anything else will not work).
 5. Paste all the text
 
 
