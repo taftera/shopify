@@ -59,10 +59,10 @@ How to install
 
 Notes
 ------
-
+![](h | width=100)
 ## SVG Catalog (24)
 
-svg | svg | svg | svg | svg | svg |
+svg | ![Chat alt](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg | width=100) | svg | svg | svg | svg |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
 svg | svg | svg | svg | svg | svg |
