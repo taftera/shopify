@@ -59,18 +59,18 @@ How to install
 
 Notes
 ------
-<img src="https://github.com/favicon.ico" height="24">
+
 ## SVG Catalog (24)
 
-. | . | . | . | . | . |
+<img src="" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-svg | ![Chat alt](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg) | svg | svg | svg | svg |
+<img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
-svg | svg | svg | svg | svg | svg |
+<img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Email alt | Gift card | Location | Location alt | Lock closed | Lock open |
-svg | svg | svg | svg | svg | svg |
+<img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Lock digital | People | Price tag | Price tag: discount | Price tag: sale | Question |
-svg | svg | svg | svg | svg | svg |
+<img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Shop | Shopping cart | Shopping cart alt | Smartphone | Smartphone fav | Smartphone shopping |
 
 All icons were made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
