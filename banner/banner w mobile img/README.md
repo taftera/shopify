@@ -1,6 +1,6 @@
 ![Project_01](https://github.com/taftera/shopify/blob/master/banner/banner%20w%20mobile%20img/gh-display_01.jpg)
 
-Banner with mobile specific image | Shopify Help
+Banner with mobile specific image | Shopify Help by @taftera
 ------
 
 Usually when I develop, many of the banners we use aren't the same when people use their phones. I don't know why it hasn't been pre-installed but this is a life saver.

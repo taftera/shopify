@@ -1,6 +1,6 @@
 ![Project_02](https://github.com/taftera/shopify/blob/master/testimonials/testimonials%20w%20image/gh-display_02b.jpg)
 
-Testimonials with profile image
+Testimonials with profile image | Shopify Help by @taftera
 ------
 
 Well, lets be real, when ever you are on a site searching for reviews for your next trip (screw you COVID-19 !!!) or checking if the new mouse you've been researching is the best. Everyone likes / trust more when they have a profile pic besides their *testimonial*.

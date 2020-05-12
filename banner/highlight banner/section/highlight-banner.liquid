@@ -1,0 +1,234 @@
+<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}">  
+  {% case section.blocks.size %}
+    {% when 1 %}
+      {%- assign column_size = '' -%}
+    {% when 2 %}
+      {%- assign column_size = 'medium-up--one-half' -%}
+    {% when 3 %}
+      {%- assign column_size = 'medium-up--one-third' -%}
+    {% else %}
+      {%- assign column_size = 'medium-up--one-quarter' -%}
+  {% endcase %}
+{{ section.settings.display }}
+  {% for block in section.blocks %}
+  <div class="grid__item {{ column_size }} js highlight_banner" {{ block.shopify_attributes }} style="padding:{{ section.settings.padding_height }}px 0; background-color:{{ section.settings.background_color }}; color:{{ section.settings.font_color }}; font-size:{{ section.settings.padding_height }}px;{% if section.settings.display_flow == 'vertical' %} flex-direction: column;{% endif %}">
+      <div class="hb_img">
+        {% if block.settings.image == blank %}
+        <div class="hb_svg">{% include 'highlight-banner-svg.liquid' %}</div>
+        {% else %}
+        <img src="{{ block.settings.image | img_url: '80x' }}"/>
+    	{% endif %}
+      </div>
+      <div class="hb_text">
+        <span style="font-size:{{ block.settings.header_font_size }}px;{% if block.settings.font_style == 'italic' %} font-style: italic;{% elsif block.settings.font_style == 'bold' %} font-weight: bold;{% endif %}">{{ block.settings.text_one }}</span>
+        {% if block.settings.text_two != blank %}
+        <br><span style="font-size:{{ block.settings.secondary_font_size }}px">{{ block.settings.text_two }}</span>
+        {% endif %}
+      </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Highlight Banner",
+  "class": "index-section index-section--flush",
+  "max_blocks": 4,
+  "settings": [
+  {
+    "type": "header",
+    "content": "Highlight Banner Config"
+  },
+  {
+    "type": "range",
+    "id": "padding_height",
+    "min": 0,
+    "max": 60,
+    "step":5,
+    "unit": "px",
+    "label":"Padding Height",
+    "default": 0
+  },
+  {
+     "type": "color",
+     "id": "font_color",
+     "label": "Items color",
+     "default": "#3a3a3a"
+  },
+  {
+     "type": "color",
+     "id": "background_color",
+     "label": "Background color",
+     "default": "#eaeaea"
+  },
+  {
+     "type": "header",
+     "content": "Direction Config"
+  },
+  {
+     "type": "radio",
+     "id": "display_flow",
+     "options": [
+       { "value": "horizontal", "label": "Horizontal"},
+       { "value": "vertical", "label": "Vertical"}
+    ],
+    "default": "horizontal",
+    "label": "Display Direction"
+  }],
+  "blocks": [
+  {
+      "type": "image",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image / SVG Config",
+		  "info": "If an image is selected, SVG's wont load"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image Select",
+		  "info": "80x80 pixels images recommended"
+        },
+        {
+           "type": "select",
+           "id": "svg_select",
+           "options": [
+              { "value": "no_icon", "label": "No icon"},
+              { "value": "chat", "label": "Chat"},
+              { "value": "chat_alt", "label": "Chat alternate"},
+              { "value": "credit_card_img", "label": "Credit card"},
+              { "value": "delivery_truck", "label": "Delivery"},
+              { "value": "delivery_truck_alt", "label": "Delivery alternate"},
+              { "value": "email", "label": "Email"},
+              { "value": "email_alt", "label": "Email alternate"},
+              { "value": "gift_card", "label": "Gift card"},
+              { "value": "location", "label": "Location"},
+              { "value": "location_alt", "label": "Location alternate"},
+              { "value": "lock", "label": "Lock: closed"},
+              { "value": "lock_open", "label": "Lock: open"},
+              { "value": "lock_digital", "label": "Lock: digital"},
+              { "value": "people", "label": "People"},
+              { "value": "price_tag", "label": "Price tag"},
+              { "value": "price_tag_discount", "label": "Price tag: discount"},
+              { "value": "price_tag_sale", "label": "Price tag: sale"},
+              { "value": "question", "label": "Question"},
+              { "value": "shop", "label": "Shop"},
+              { "value": "shopping_cart", "label": "Shopping cart"},
+              { "value": "shopping_cart_alt", "label": "Shopping cart alternate"},
+              { "value": "smartphone", "label": "Smartphone"},
+              { "value": "smartphone_favorite", "label": "Smartphone: favorite"},
+              { "value": "smartphone_shopping", "label": "Smartphone: shopping"}
+           ],
+   		   "default":   "no_icon",
+           "label": "SVG Icon Select ",
+		   "info": "Icons made by xnimrodx"
+        },
+        {
+           "type": "color",
+           "id": "svg_icon_color",
+           "label": "SVG color",
+           "default": "#3a3a3a"
+        },
+        {
+          "type": "header",
+          "content": "Information Config"
+        },
+		{
+           "type": "text",
+           "id": "text_one",
+           "default": "Main text",
+           "label": "Header"
+        },
+        {
+          "type": "range",
+          "id": "header_font_size",
+          "min": 8,
+          "max": 30,
+          "step":1,
+          "unit": "px",
+          "label":"Font Height",
+          "default": 21
+        },
+        {
+           "type": "select",
+           "id": "font_style",
+           "options": [
+              { "value": "normal", "label": "Normal"},
+              { "value": "italic", "label": "Italic"},
+              { "value": "bold", "label": "Bold"}
+           ],
+   		   "default":   "bold",
+           "label": "Font Style / Weight"
+        },
+		{
+           "type": "text",
+           "id": "text_two",
+           "default": "Secondary text",
+           "label": "Support Information"
+        },
+        {
+          "type": "range",
+          "id": "secondary_font_size",
+          "min": 8,
+          "max": 20,
+          "step":1,
+          "unit": "px",
+          "label":"Font Height",
+          "default": 13
+        }
+	  ]
+  }],
+  "presets": [
+    {
+      "name": "Highlight Banner",      
+	  "category": "Alex Development | @taftera | https://github.com/taftera/",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.highlight_banner { 
+  /* height: 130px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hb_img {
+  float:left;
+  padding:10px;
+  padding-left:30px;
+}
+.hb_svg {
+  width:80px;
+  height:80px;
+}
+.hb_svg svg {
+  max-height:80px !important;
+  max-width:80px !important;
+}
+.hb_text {
+  float:left;
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

@@ -1,4 +1,6 @@
-# Shopify Section Importing Tutorial
+Shopify Section Importing Tutorial | Shopify Help by @taftera
+------
+
 When starting with Shopify, you are always guessing:
 - Why can't I just add that SECTION to the *this* page I'm currently on.
 
@@ -10,5 +12,5 @@ Tutorials
 ------
 ![Project_03-F](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03_f.jpg)
 - [Page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md)
-- [Product page Section](#) - pending
+- [Product page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/product-section-tutorial.md) - 75% 
 - [Blog Section](#) - pending
