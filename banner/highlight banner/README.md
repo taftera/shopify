@@ -62,9 +62,8 @@ Notes
 
 ## SVG Catalog (24)
 
-<img src="" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
+<img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/credit-card.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/delivery-truck.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/delivery-truck-fast.svg height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/email.svg" height="48"> |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-<img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
 <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> | <img src="" height="48"> |
 Email alt | Gift card | Location | Location alt | Lock closed | Lock open |
