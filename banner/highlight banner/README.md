@@ -7,7 +7,7 @@ Lately, I've seen a lot of Shopify Stores with *highlight banners* they usually 
 
 As well, I had the opportunity of working with a premium template by [Pixel Union](https://pixelunion.net/) which made everything easier. But I had to add my flavor to it.
 
-For this particular development, I needed to have full control of all the [24 SVG icons](#svg-catalog-(24)) (made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)) so I added them through a snippet.
+For this particular development, I needed to have full control of all the [24 SVG icons](#-svg-catalog-(24)), so I added them through a snippet.
 
 ```{% include 'highlight-banner-svg' %}```
 
@@ -72,5 +72,6 @@ Lock digital | People | Price tag | Price tag: discount | Price tag: sale | Ques
 svg | svg | svg | svg | svg | svg |
 Shop | Shopping cart | Shopping cart alt | Smartphone | Smartphone fav | Smartphone shopping |
 
+All icons were made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
 
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
