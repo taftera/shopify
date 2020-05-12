@@ -1,6 +1,6 @@
-![Project_01](https://github.com/taftera/shopify/blob/master/banner/banner%20w%20mobile%20img/gh-display_01.jpg)
+![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
-Banner with mobile specific image | Shopify Help by @taftera
+Highlight Banner with pre-installed SVG icons | Shopify Help by @taftera
 ------
 
 Usually when I develop, many of the banners we use aren't the same when people use their phones. I don't know why it hasn't been pre-installed but this is a life saver.
@@ -41,4 +41,4 @@ Notes
 ------
 If by any chance you cant see the mobile image displayed, double check the "Enable Mobile Banner" it has been a few times I've re-check my code for this simple thing.
 
-Project - [adidas Watches Mexico](https://adidas-watches-mexico.myshopify.com/)
+![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
