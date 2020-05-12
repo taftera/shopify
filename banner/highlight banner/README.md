@@ -17,25 +17,35 @@ This **SECTION** has the basic 2 / 3 / 4 block display configuration from the **
 
 You'll see this options in the **highlight-banner** configuration:
 
+| Reference | Description |
+| --------- | ----------- |
+| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + HIGHLIGHT BANNER CONFIG
   + Padding height
   + Items Color (Both text options)
   + Background Color
 + DIRECTION CONFIG
   + Whether you'll like to see the icon and the text side by side (Horizontal) or stacked (vertical)
+|
 
 Each **block** will contain the next configurations:
 
+| Reference | Description |
+| --------- | ----------- |
+| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + IMAGE / SVG CONFIG
   + Image Select
   + SVG Icon Select
     + SVG Color
+|
+| ![placeholder](https://via.placeholder.com/200x600.png?text=@taftera+Github+Tutorial) | 
 + INFORMATION CONFIG
   + Header input
   + Font Size (21px)
   + Font Style (normal / **bold** / *italic*)
   + Support Information input
   + Font Size (13px)
+|
 
 How to install
 ------
@@ -57,10 +67,8 @@ How to install
 4. Name it "**highlight-banner-svg.liquid**" (anything else will not work).
 5. Paste all the text
 
-Notes
-------
 
-## SVG Catalog (24)
+### SVG Catalog (24)
 
 <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/chat-box.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/credit-card.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/delivery-truck.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/delivery-truck-fast.svg" height="48"> | <img src="https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/icon-reference/email.svg" height="48"> |
 | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
@@ -74,5 +82,12 @@ Shop | Shopping cart | Shopping cart alt | Smartphone | Smartphone fav | Smartph
 
 All icons were made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
 
+Notes
+------
+
+
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
-# This is a heading
+
+Thanks for reading my tutorial
+
+Alex *:)*

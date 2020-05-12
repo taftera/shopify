@@ -46,4 +46,6 @@ Tutorial
 ------
 In this link you'll find the basic sections and their file location within the Debut theme.
 
-Thanks for reading my tutorial :)
+Thanks for reading my tutorial
+
+Alex *:)*
