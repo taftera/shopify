@@ -60,8 +60,8 @@ How to install
 Notes
 ------
 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 svg | svg | svg | svg | svg | svg |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 Chat | Chat alt | Credit card | Delivery | Delivery alt | Email |
 svg | svg | svg | svg | svg | svg |
 Email alt | Gift card | Location | Location alt | Lock closed | Lock open |
