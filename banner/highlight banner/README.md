@@ -1,4 +1,3 @@
-[Go to Heading section](#-this-is-a-heading)
 ![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
 
 Highlight Banner with pre-installed SVG icons | Shopify Help by @taftera
@@ -8,7 +7,7 @@ Lately, I've seen a lot of Shopify Stores with *highlight banners* they usually 
 
 As well, I had the opportunity of working with a premium template by [Pixel Union](https://pixelunion.net/) which made everything easier. But I had to add my flavor to it.
 
-For this particular development, I needed to have full control of all the [24 SVG icons](#-svg-catalog-(24)), so I added them through a snippet.
+For this particular development, I needed to have full control of all the **24 SVG icons** (visual guide at the bottom), so I added them through a snippet.
 
 ```{% include 'highlight-banner-svg' %}```
 
@@ -61,7 +60,7 @@ How to install
 Notes
 ------
 
-# SVG Catalog (24)
+## SVG Catalog (24)
 
 svg | svg | svg | svg | svg | svg |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
