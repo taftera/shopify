@@ -1,4 +1,4 @@
-![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
+![Project_04-a](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_a.jpg)
 
 Highlight Banner with pre-installed SVG icons | Shopify Help by @taftera
 ------
@@ -13,7 +13,7 @@ For this particular development, I needed to have full control of all the **24 S
 
 This **SECTION** has the basic 2 / 3 / 4 block display configuration from the **Debut Theme** changing their size display and breakpoint depending on the number of blocks used.
 
-![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
+![Project_04-b](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_b.jpg)
 
 You'll see this options in the **highlight-banner** configuration:
 
@@ -37,6 +37,8 @@ Each **block** will contain the next configurations:
   + Support Information input
   + Font Size (13px)
 
+![Project_04-c](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_c.jpg)
+
 How to install
 ------
 
@@ -46,7 +48,7 @@ How to install
 3. Under **Section** > Click **Add a new section**
 4. Name it "highlight-banner".
 
-![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
+![Project_04-d](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_d.jpg)
 
 5. Paste all the text
 
@@ -57,6 +59,7 @@ How to install
 4. Name it "**highlight-banner-svg**" (anything else will not work).
 5. Paste all the text
 
+![Project_04-e](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_e.jpg)
 
 ### SVG Catalog (24)
 
@@ -74,9 +77,9 @@ All icons were made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
 
 Notes
 ------
+I was thinking of adding a link to icons, although all the data I've found through TagManager / Analytics. They are barely to non clicked. If you feel different, hit me up at: twitter.com/taftera and we can work this update.
 
-
-![placeholder](https://via.placeholder.com/1600x776.png?text=@taftera+Github+Tutorial)
+![Project_04-f](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/screenshots/gh-display_04_f.jpg)
 
 Thanks for reading my tutorial
 
