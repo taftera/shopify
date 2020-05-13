@@ -7,7 +7,7 @@ Lately, I've seen a lot of Shopify Stores with *highlight banners* they usually 
 
 As well, I had the opportunity of working with a premium template by [Pixel Union](https://pixelunion.net/) which made everything easier. But I had to add my flavor to it.
 
-For this particular development, I needed to have full control of all the **24 SVG icons** (visual guide at the bottom), so I added them through a snippet.
+For this particular development, I needed to have full control of all the **[24 SVG icons](https://github.com/taftera/shopify-help/blob/master/banner/highlight%20banner/README.md#svg-catalog-24)** (visual guide at the bottom), so I added them through a snippet.
 
 ```{% include 'highlight-banner-svg' %}```
 
