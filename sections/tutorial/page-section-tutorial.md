@@ -5,8 +5,7 @@ In this tutorial, I'll be adding the banner or (hero.liquid) to an information p
 
 Tutorial 
 ------
-1. First as always, you need to identify which **SECTION** and where is the code stored. 
-   - At the bottom I'll link to a list of the basic ones on the **Debut** template.
+1. First as always, you need to identify which **SECTION** and where is the code stored. Basic Debut Theme template [SECTIONS](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md#section-location)
 
 2. Once you've got the section you are looking for, make a copy of the code and rename it: *name*-*destination*. In my case will be *hero*-page.liquid. Since I've wanted to display a full width / adaptable image in my about page.
    - **Note:** due to the *settings_data.json* it's impossible to just link the section name to the final destination. Since it will take the variables from the front page edits and apply them to the page in question.
