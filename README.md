@@ -17,16 +17,17 @@ Developments
 ------
 1. **Banner with mobile specific image and text alignment** - [Go to project](https://github.com/taftera/shopify/tree/master/banner/banner%20w%20mobile%20img)
 2. **Testimonials with Profile Image** - [Go to project](https://github.com/taftera/shopify/tree/master/testimonials/testimonials%20w%20image)
+3. **"Highlight" banner container w/img and text inserting.** - [Go to project](https://github.com/taftera/shopify-help/tree/master/banner/highlight%20banner)
 
 To Do
 ------
 1. Tutorial to "import" sections in ❌ Product page  | ❌ Blog | ✅ [Pages](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md).
-2. "Highlight" banner container w/img and text inserting.
-3. Swipe Gallery for image banner.
-4. Swipe Gallery for products.
-5. Menu update.
-6. Product update with tag reading.
-7. External Invoice Creator
+2. Swipe Gallery for image banner.
+3. Swipe Gallery for products.
+4. Menu update.
+5. Product update with tag reading.
+6. External Invoice Creator
+7. Multi-line Announcement Bar
 
 ------
 
