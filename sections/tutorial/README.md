@@ -11,6 +11,6 @@ Since there are slight diferences with each type of page (product page / blog / 
 Tutorials 
 ------
 ![Project_03-F](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03_f.jpg)
-- [Page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md)
-- [Product page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/product-section-tutorial.md) - 75% 
-- [Blog Section](#) - pending
+- [Page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/page-section-tutorial.md) - *done*
+- [Product page Section](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/product-section-tutorial.md) - *done*
+- [Blog Section](#) - working on it
