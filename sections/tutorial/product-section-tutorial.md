@@ -37,7 +37,7 @@ Tutorial
 6. On the top you'll see the name of the template you are working on *Alex Debut - DEV* and right next to it **Home page** with a "▾". Click and scroll for the **Product pages**.
 ![Project-03-PP-06](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03-2_f.png)
 
-7. You'll need to set up the blocks for it to start displaying the information. [Highlight Banner Tutorial](https://github.com/taftera/shopify-help/tree/master/banner/highlight%20banner)
+7. Once you are in the "Product Page" you'll see **Highlight Banner** Section in the display, as you select it, there will be no information to display. You need to set up the **blocks** for it to start displaying the information. [Highlight Banner Tutorial](https://github.com/taftera/shopify-help/tree/master/banner/highlight%20banner)
 ![Project-03-PP-07](https://github.com/taftera/shopify-help/blob/master/sections/tutorial/screenshots/gh-display_03-2_g.png)
 
 8. **TA-DAAA !** When loaded you'll see that there's the section you linked ! 
