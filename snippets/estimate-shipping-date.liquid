@@ -1,0 +1,207 @@
+    {% if product.type == 'Solar' or product.type == 'Oftálmico' %}
+
+        {% assign min_estimate_day = 432000 %} <!-- 5 días > -->
+        {% capture 'pre_day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% if pre_day_one contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_one contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+
+        {% assign estimate_day = 518400 %} <!-- 6 días -->
+        {% capture 'day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% capture 'day_six' %}{{ "now" | date: "%s" | plus: 518400 | date: "%a"}}{% endcapture %}
+        {% if day_one contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_one contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+
+    {% elsif product.type == 'Solución' %}
+
+        {% assign estimate_day = 345600 %} <!-- 4 días -->
+        {% capture 'day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% if day_one contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_one contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+
+    {% elsif product.type == 'Lentes de Contacto' %}
+
+        {% assign min_estimate_day = 518400 %} <!-- 6 días > -->
+        {% capture 'pre_day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_six' %}{{ "now" | date: "%s" | plus: 518400 | date: "%a"}}{% endcapture %}
+        {% if pre_day_one contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_six contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_one contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_six contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+
+        {% assign estimate_day = 777600 %} <!-- 9 días -->
+        {% capture 'day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% capture 'day_six' %}{{ "now" | date: "%s" | plus: 518400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_seven' %}{{ "now" | date: "%s" | plus: 604800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_eight' %}{{ "now" | date: "%s" | plus: 691200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_nine' %}{{ "now" | date: "%s" | plus: 777600 | date: "%a"}}{% endcapture %}
+        {% if day_one contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_seven contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_eight contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_nine contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_one contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_seven contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_eight contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_nine contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+		{% assign estimate_day = estimate_day | plus: 86400 %}
+
+        {% capture 'weekend' %}{{ "now" | date: "%s" | plus: estimate_day | date: "%a"}}{% endcapture %} 
+        {% if weekend == 'Sat' %}
+          {% assign estimate_day = estimate_day | plus: 172800 %}
+        {% elsif weekend == 'Sun' %}
+          {% assign estimate_day = estimate_day | plus: 86400 %}
+        {% endif %}
+
+    {% endif %}
+
+{% comment %}
+PreEstimate Date
+        {% capture 'pre_day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% capture 'pre_day_six' %}{{ "now" | date: "%s" | plus: 518400 | date: "%a"}}{% endcapture %}
+
+        {% if pre_day_one contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_six contains 'Sat' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+
+        {% if pre_day_one contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_two contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_three contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_four contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_five contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+        {% if pre_day_six contains 'Sun' %}{% assign min_estimate_day = min_estimate_day | plus: 86400 %}{% endif %}
+Estimate Date
+        {% capture 'day_one' %}{{ "now" | date: "%s" | plus: 86400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_two' %}{{ "now" | date: "%s" | plus: 172800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_three' %}{{ "now" | date: "%s" | plus: 259200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_four' %}{{ "now" | date: "%s" | plus: 345600 | date: "%a"}}{% endcapture %}
+        {% capture 'day_five' %}{{ "now" | date: "%s" | plus: 432000 | date: "%a"}}{% endcapture %}
+        {% capture 'day_six' %}{{ "now" | date: "%s" | plus: 518400 | date: "%a"}}{% endcapture %}
+        {% capture 'day_seven' %}{{ "now" | date: "%s" | plus: 604800 | date: "%a"}}{% endcapture %}
+        {% capture 'day_eight' %}{{ "now" | date: "%s" | plus: 691200 | date: "%a"}}{% endcapture %}
+        {% capture 'day_nine' %}{{ "now" | date: "%s" | plus: 777600 | date: "%a"}}{% endcapture %}
+
+        {% if day_one contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_seven contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_eight contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_nine contains 'Sat' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+
+        {% if day_one contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_two contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_three contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_four contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_five contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_six contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_seven contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_eight contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+        {% if day_nine contains 'Sun' %}{% assign estimate_day = estimate_day | plus: 86400 %}{% endif %}
+
+{% endcomment %}
+
+{% capture 'pre_month' %}{{ "now" | date: "%s" | plus: min_estimate_day | date: "%B" }}{% endcapture %}
+{% capture 'post_month' %}{{ "now" | date: "%s" | plus: estimate_day | date: "%B" }}{% endcapture %}
+
+    <div class="protected-sale"><div>{% include 'shipping.svg' %}</div><div>
+      {% if selected_variant.sku == '218182' or selected_variant.sku == '513115' %}Tiempo de entrega de 4 a 6 semanas{% else %}
+      Envío <strong style="font-weight:600;">GRATIS</strong>{% if product.price < 100000 %} en compras mayores a $1,000{% endif %}
+      <br><span style="color:#57606F;">
+        <small>
+      {% if product.type == 'Solar' %}
+        {% if pre_month == post_month %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% else %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} de {{ pre_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% endif %}
+      {% for tag in product.tags %}{% if tag == 'Graduable' %}<br>El servicio de graduación puede tardar hasta 4 días hábiles extra.{% endif %}{% endfor %}
+      {% elsif product.type == 'Oftálmico' %}
+        {% if pre_month == post_month %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% else %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} de {{ pre_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% endif %}
+        <br>El servicio de graduación puede tardar de 1 a 4 días hábiles extra.
+      {% elsif product.type == 'Solución' %}
+      Recíbelo antes del {{ "now" | date: "%s" | plus: estimate_day | date: "%d %B" | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+      {% elsif product.type == 'Lentes de Contacto' %}
+        {% if pre_month == post_month %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% else %}
+          Recíbelo entre el {{ "now" | date: "%s" | plus: min_estimate_day | date: "%d" }} de {{ pre_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }} y el {{ "now" | date: "%s" | plus: estimate_day | date: "%d" }} de {{ post_month | replace: "January","Enero" | replace: "February","Febrero" | replace: "March","Marzo" | replace: "April","Abril" | replace: "May","Mayo" | replace: "June","Junio" | replace: "July","Julio" | replace: "August","Agosto" | replace: "September","Septiembre" | replace: "October","Octubre" | replace: "November","Noviembre" | replace: "December","Diciembre" }}
+        {% endif %}
+      {% endif %}
+      {% endif %}
+        </small>
+      </span>
+      
+      </div></div>
