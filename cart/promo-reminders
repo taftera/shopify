@@ -1,0 +1,88 @@
+<style>
+.cart__image-wrapper {margin:auto 0;} 
+.cart--promo-reminder {
+  border: 1px solid #f16731;
+  border-left: 7px solid #f16731 !important;
+  border-radius: 2px;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom:10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+  .cart--promo-left { 
+    width:120px;
+  	display: flex;
+    justify-content: space-around;
+  }
+  .cart--promo-svg svg { height:20px; }
+  .cart--promo-excel {
+    font-size: 16px;
+    font-weight: 600;
+    color:#C11632;
+  }
+  .cart--promo-right { width: calc(100% -140px); padding-left:20px; }
+  .cart--promo-display div { width:100%; padding-bottom:10px;}
+  
+  @media only screen and (max-width: 576px) {
+    .cart--promo-left { display:none; }
+    .cart--promo-right { width:100%; }
+  }
+</style>
+
+<div class="cart--promo-reminder" style="display:none;">
+  <div class="cart--promo-left">
+  <div class="cart--promo-svg">
+  <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#f16731;}
+</style>
+<path id="Icon_material-notifications-none" class="st0" d="M99.68,188.56c10.08-0.03,18.24-8.21,18.25-18.29h-36.5
+	C81.43,180.36,89.6,188.53,99.68,188.56z M154.42,133.82V88.23c0-28.01-14.83-51.46-41.06-57.67v-6.24
+	c-0.2-7.56-6.5-13.52-14.05-13.32c-7.27,0.2-13.12,6.05-13.32,13.32v6.21c-26.1,6.2-41.06,29.56-41.06,57.7v45.62l-18.25,18.22v9.12
+	h145.99v-9.12L154.42,133.82z M136.17,142.94h-73V88.23c0-22.63,13.78-41.06,36.49-41.06s36.49,18.44,36.49,41.06L136.17,142.94z"/>
+</svg>
+  </div>
+  <div class="cart--promo-excel">¡Excelente!</div>
+  </div> 
+  <div class="cart--promo-right">
+  <div class="cart--promo-display">
+    {% assign item_count = 0 %} 
+    {% assign other_item_count = 0 %}
+    {% for item in cart.items %}
+      {% if item.product.tags contains '20200820_2x1' %}{% assign item_count = item_count | plus: 1 %}{% endif %} 
+      {% assign other_item_count = other_item_count | plus: 1 %}
+    {% endfor %}
+    {% if item_count >= 1 %}
+    <div id="promoSolares2x1">
+      <a href="https://lux.mx/discount/200820_2x1?redirect=%2Fcollections%2Fpromocion-solares-2x1&utm_source=cart--promo-reminder&utm_medium=link&utm_campagin=promocion-solares-2x1&utm_term=articulos_participantes&utm_content=promo-2x1">
+      {% assign value = item_count | modulo:2 %}
+      {% if value != 0 %}
+      <p style="margin: 0; padding-bottom: 5px; font-size: 16px; font-weight: normal;">¡Hey! te falta 1 producto para disfrutar de la promoción de Solares 2x1</p>
+      {% endif %}
+      <p style="margin: 0; font-weight: normal;"><b>{% if item_count > 1 %}Tienes artículos que participan{% else %}Tienes un artículo que participa{% endif %} en 2x1{% if item_count > 1 %} | 4x2 | 6x3{% endif %}</b></a>, 
+      {% if value == 0 %}puedes agregar otro par de <a href="{{ shop.domain }}?utm_source=cart--promo-reminder&utm_medium=link&utm_campagin=hawkers&utm_term=add_extra&utm_content=promo-2x1">Solares seleccionados</a> y acceder de nuevo a la promoción.
+      {% else %}puedes agregar un modelo más de <a href="{{ shop.domain }}?&utm_source=cart--promo-reminder&utm_medium=link&utm_campagin=hawkers&utm_term=add_extra&utm_content=promo-2x1">Solares</a> diferente o el mismo para ver el descuento en tu Carrito.{% endif %}</p>
+    </div>
+    {% endif %}
+    
+    {% if other_item_count >= 1 %}
+    
+    {% assign free_shipping = 100000 %}
+    {% assign total_cart = cart.total_price %}
+    <div id="shipping">
+    {% if cart.total_price >= 149000 %} ¡Felicidades tienes ENVÍO GRATIS! {% else %}
+    {% assign faltante = free_shipping | minus: total_cart %}
+    ¡Sólo te faltan {{ faltante | money }} para tener Envío GRATIS!
+    {% endif %}
+    </div>
+    
+    <div id="oferta-financiera">Hasta <strong>{% if cart.total_price >= 300000 %}9{% elsif cart.total_price >= 200000 %}6{% elsif cart.total_price <= 199999 %}3{% endif %} Meses sin Intereses</strong> {% if cart.total_price <= 150000 %}<span>(monto mínimo para MSI: $1,500)</span>{% endif %}</div>
+    {% endif %}
+  </div>
+  </div> 
+</div>
