@@ -1,0 +1,9 @@
+  <div class="customPromotions">
+	{% for c in product.collections %}
+	  {% if c.handle == "2x1" %}
+      <div style="text-align:center;position:absolute; margin-top: 0.5rem; top:0px; right:0px; z-index:5;">
+      <img src="https://cdn.shopify.com/s/files/1/0035/5991/5629/files/tag-2-1.jpg?v=1595953277" style="max-width: 125px; height: 19px;">
+      </div>
+	  {% endif %}
+	{% endfor %}
+  </div>
