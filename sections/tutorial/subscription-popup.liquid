@@ -1,0 +1,353 @@
+<!-- 1. Add latest jQuery and fancybox files -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<style>
+  .fancybox-subscription { width:{{ section.settings.img_width }}px; padding:10px 20px; }
+  .fancybox-content { max-width:{{ section.settings.img_width | plus: 60 }}px; height:{{ section.settings.img_height | plus: 180 }}px; padding:30px; }
+  .fancybox-img-holder {
+    background-image: url({{ section.settings.popup_image | img_url: '600x' }});
+	background-repeat: no-repeat, repeat; 
+    background-position: center top; 
+    background-size: contain;
+    background-color:{{ section.settings.background_color | escape }};
+	height:{{ section.settings.img_height | plus: 110 }}px;
+  }
+  .fancybox-padder { padding-top:10px; min-width:{{ section.settings.img_width }}px; margin-bottom:0; }
+  .discount--thanks { padding: 0 90px; }
+  .discount--size { font-size: 50px; text-transform:underline; } 
+  .fancybox--center { display:flex; padding-top:{{ section.settings.height_range }}px; overflow:hidden; } 
+  .flex-btn {display: flex; justify-content: space-evenly;}
+  @media only screen and (max-width: 440px) {
+    .fancybox-subscription { width:{{ section.settings.img_mobile_width }}px; }
+    .fancybox-content { max-width:90%; height:{{ section.settings.img_height | plus: 60 }}px; }
+    .fancybox-img-holder { 
+      background-image: url({{ section.settings.popup_mobile_image | img_url: '320x' }}); 
+      height:{{ section.settings.img_mobile_height | plus: 120 }}px;
+    }
+    .fancybox-padder {  min-width:{{ section.settings.img_mobile_width }}px; padding-top:20px; }
+    .discount--size { font-size:20px; margin:5px 0; }
+    .discount--thanks { font-size:14px; padding: 0 40px; } 
+    .fancybox--center { padding-top:{{ section.settings.height_range | minus: 120 }}px; }
+    .fancy--input-group { flex-flow:wrap !important; }
+    .fancy--input-flex { width:100%; margin:0;} 
+    .flex-btn { flex-flow: column; }
+  }
+  .successful--pop-up {
+  	border:1px solid #f16731;
+    background-color:#ffffff;
+    padding:10px;
+  }
+</style>
+
+<a class="fancy-pop" data-fancybox data-src="#hidden-content" href="javascript:;">
+  <span class="fancy-pop">&nbsp;</span></a>
+
+<div style="display: none;" id="hidden-content">
+    {% if section.settings.title != blank %}
+      <div class="section-header text-center" style="color:{{ section.settings.text_color | escape }}; padding-top:40px;">
+          <h4 class="h2">{{ section.settings.title | escape }} {{ msg_display }}</h4>
+      </div>
+    {% endif %}
+  <div class="fancybox-img-holder">    
+  	<center class="fancybox--center">  
+      {% for block in section.blocks %}
+      {% case block.type %}
+      {% when 'newsletter' %}
+      <div class="fancybox-subscription" style="order:2; {% if form.posted_successfully? %}display:none;{% endif %}">
+        {% if block.settings.subs_title %}<h2 style="text-align:left; color:{{ section.settings.text_color | escape }}">{{ block.settings.subs_title }}</h2>{% endif %}
+        {%- assign formId = 'ContactFooter' -%}
+        {% form 'customer', id: formId, novalidate: 'novalidate' %}
+        {% assign subscription_count = 0 %} 
+        {%- if form.posted_successfully? -%}
+        {% assign subscription_count = subscription_count | plus: 1 %}
+        <p class="form-message form-message--success" tabindex="-1" style="margin-bottom: 5px; display:none;" data-form-status>
+        {{ 'general.newsletter_form.confirmation' | t }}
+        </p>
+{% comment %}        
+        <div class="successful--pop-up">
+          <p>El código de descuento es:</p>
+          <h2>POPDESCUENTO</h2>
+        </div>
+{% endcomment %}        
+        {%- endif -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="input-group fancy--input-group {% if form.errors %} input-group--error{% endif %}"{% if form.posted_successfully? %} style="display:none;"{% endif %}>
+        <input type="email"
+          name="contact[email]"
+          id="{{ formId }}-email"
+          class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %} fancy--input-flex"
+          value="{{ form.email }}"
+          placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+          aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+          aria-required="true"
+          required
+          autocorrect="off"
+          autocapitalize="off"
+          {% if form.errors %}
+          aria-invalid="true"
+          aria-describedby="{{ formId }}-email-error"
+          data-form-status
+          {% endif %}>
+        <span class="input-group__btn fancy--input-flex">
+        <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
+        <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
+        </button>
+        </span>
+        </div>
+{% if form.posted_successfully? %}
+        <div class="successful--pop-up" style="display:none;"></div>
+        {% assign msg_display = 'success' %} 
+{% else %}
+        {% if form.errors contains 'email' %}
+        <span id="{{ formId }}-email-error" class="input-error-message">
+        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+        {% include 'icon-error' %}
+        <span class="site-footer__newsletter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+        </span>
+        {% endif %}
+    {% comment %}{{ form.errors | default_errors }}{% endcomment %}
+{% endif %}
+        {% endform %}        
+      </div>
+      
+      {% when 'text' %}
+{% if subscription_count == 0 %}
+          {% if block.settings.title != blank %}
+            <h3 class="h4" style="color:{{ section.settings.text_color | escape }};">{{ block.settings.title | escape }}</h3>
+          {% endif %}
+          {% if block.settings.text != blank %}
+    <div style="padding-bottom:40px; width:90%; margin:0 auto;">
+      <span style="color:{{ section.settings.text_color | escape }};">
+        {{ block.settings.text }}</span>
+    </div>
+          {% endif %}
+          {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="btn btn--primary btn--small">
+              {{ block.settings.button_label | escape }}
+            </a>
+          {% endif %}
+{% endif %}      
+      {% endcase %}
+      {% endfor %}
+    
+{% if msg_display == 'success' %}
+      <div class="section-header text-center fancybox-padder" style="order:1; color:{{ section.settings.text_color | escape }};">
+          <h4 class="h2 discount--thanks">¡Gracias! Ahora puedes utilizar el cupón</h4>
+        <span class="flex-btn">
+          <h2 class="discount--size">{{ section.settings.discount_code }}</h2>
+          <button class="btn" style="height: 40px; margin-top: 10px;" onclick="copyToClipboard('.discount--size')">Copiar código</button>
+        </span>
+      </div>  
+{% endif %} 
+  	</center> 
+    
+  </div>
+</div>
+
+
+<!-- popup code -->
+
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+  
+function getCookie(name) {
+  var re = new RegExp(name + "=([^;]+)");
+  var value = re.exec(document.cookie);
+  return (value != null) ? unescape(value[1]) : null;
+} 
+var popCookie = getCookie("popup");
+      
+var popPromoCount = 0; 
+//console.log('PromoCheck 01: ' + popCookie + ' | ' + popPromoCount);
+
+$(document).ready(function() {
+  if (popPromoCount == 0) {
+    //console.log('PromoCheck 02: ' + popCookie + ' | ' + popPromoCount );
+    if (popCookie != 'subscription' ) {
+      if (popCookie != 'disable' ) {
+        //console.log('No está la cookie, y no se ha lanzado el popup.');
+        $(".fancy-pop").trigger('click');
+        //console.log('poniendo la cookie');
+        var now = new Date();
+        var time = now.getTime();
+        time += 24 * 3600 * 1000;
+        now.setTime(time);
+        document.cookie = 'popup=' + 'disable' + '; expires=' + now.toUTCString() + ';';
+        //console.log('cookie ya setupeada' + popCookie);
+      } else {
+        $(".fancy-pop").trigger('click');
+        //console.log('poniendo la cookie');
+        var now = new Date();
+        var time = now.getTime();
+        time += 24 * 3600 * 1000;
+        now.setTime(time);
+        document.cookie = 'popup=' + 'subscription' + '; expires=' + now.toUTCString() + ';';
+        console.log('Ya vió el promo pop-up anteriormente');
+      }
+    }
+  }
+});  
+  
+</script>
+<!-- /popup code $("#cookie-close").addClass("hide-popup"); -->
+ {% schema %}
+  {
+    "name": "Fancybox Pop-Up",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Header",
+        "default": "Titular"
+      },
+      {
+        "type": "text",
+        "id": "discount_code",
+        "label": "Discount Code",
+        "default": "MIPRIMERACOMPRA"
+      },
+      {
+        "type": "header",
+        "content": "Popup desktop image config"
+      },
+	  {
+        "type": "image_picker",
+        "id": "popup_image",
+        "label": "Imagen de fondo (*.png | 600px * 300px)"
+      },
+      {
+        "type": "text",
+        "id": "img_height",
+        "label": "Image height in px",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "img_width",
+        "label": "Image width in px",
+        "default": "600"
+      },
+      {
+        "type": "header",
+        "content": "Popup mobile image config"
+      },
+	  {
+        "type": "image_picker",
+        "id": "popup_mobile_image",
+        "label": "Imagen de fondo (*.png | 600px * 300px)"
+      },
+      {
+        "type": "text",
+        "id": "img_mobile_height",
+        "label": "Image height in px",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "img_mobile_width",
+        "label": "Image width in px",
+        "default": "320"
+      },
+      {
+        "type": "header",
+        "content": "Popup general config"
+      },
+      {
+         "type": "color",
+         "id": "text_color",
+         "label": "Text Color",
+         "default": "#ffffff"
+      },
+      {
+         "type": "color",
+         "id": "background_color",
+         "label": "Background Color",
+         "default": "#ffffff"
+      },
+      {
+          "type": "range",
+          "id": "height_range",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "label": "After image padding",
+          "default": 120
+      },
+      {
+        "type": "header",
+        "content": "Alex Dev | @taftera | https://github.com/taftera"
+      }
+	],
+    "blocks": [
+      {
+        "name": "text",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Add a title or tagline"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs."
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "newsletter",
+        "limit": 1,
+        "name": "Suscripción al boletín",
+        "settings": [
+          {
+            "type": "text",
+            "id": "subs_title",
+            "label": "Título",
+            "info": "Se añadirá los suscriptores a tu [lista de clientes.](/admin/customers?query=&accepts_marketing=1) \"acepta marketing\".",
+            "default": "Newsletter"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+        "name": "Fancybox Pop-Up",
+      	"category": "!GGV Development - Mexico",
+        "blocks": [
+          {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
