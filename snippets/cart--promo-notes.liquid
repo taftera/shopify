@@ -1,0 +1,117 @@
+<style>
+.cart__image-wrapper {margin:auto 0;} 
+.cart--promo-note {
+  border: 1px solid #f16731;
+  border-left: 7px solid #f16731 !important;
+  border-radius: 2px;
+  padding: 10px 15px;
+  /* font-weight: 600; */
+  margin-bottom:10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+  .cart--promo-left { 
+    width:120px;
+  	display: flex;
+    justify-content: space-around;
+  }
+  .cart--promo-svg svg { height:20px; }
+  .cart--promo-excel {
+    font-size: 16px;
+    font-weight: 600;
+    color:#f16731;
+  }
+  .cart--promo-right { width: calc(100% -140px); padding-left:20px; }
+  .cart--promo-display div { width:100%; padding-bottom:7px;}
+  .cart--promo-display p { margin:0;font-family: sans-serif;font-size: 13px; }
+  @media only screen and (max-width: 576px) {
+    .cart--promo-left { display:none; }
+    .cart--promo-right { width:100%; }
+  }
+</style>
+
+{% assign subscription_product = false %}
+{% if has_items %}{% for item in cart.items %}
+{% if product-customizer-helper == 'line-item-properties' or product-customizer-helper == null %}
+{% for p in item.properties %}{% if p.first == 'Suscripción' %}{% assign subscription_product = true %}{% endif %}{% endfor %}
+{% endif %}
+{% endfor %}{% endif %}
+
+{% assign item_count = 0 %}
+{% assign twobyone_count = 0 %} 
+{% assign lc_count = 0 %} 
+{% assign ultra_count = 0 %}
+{% for item in cart.items %}
+  {% if item.product.tags contains '2x1' %}{% assign twobyone_count = twobyone_count | plus: item.quantity %}{% endif %}
+  {% if item.product.type == 'Lentes de Contacto' %}{% assign lc_count = lc_count | plus: item.quantity %}{% endif %}
+  {% if item.product.title == 'Ultra Multifocal' or item.product.title == 'Ultra tórico para Astigmatismo' %}
+  {% assign ultra_count = ultra_count | plus: item.quantity %}
+  {% endif %}
+  {% assign item_count = item_count | plus: item.quantity %}
+{% endfor %}
+<div style="display:none;">{{item_count}} lc_count == 0 and </div>
+{% if item_count >= 1 %}
+<div class="cart--promo-note">
+  <div class="cart--promo-left">
+    <div class="cart--promo-svg">
+    <?xml version="1.0" encoding="utf-8"?>
+  <!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+  <style type="text/css">
+      .st0{fill:#f16731;}
+  </style>
+  <path id="Icon_material-notifications-none" class="st0" d="M99.68,188.56c10.08-0.03,18.24-8.21,18.25-18.29h-36.5
+      C81.43,180.36,89.6,188.53,99.68,188.56z M154.42,133.82V88.23c0-28.01-14.83-51.46-41.06-57.67v-6.24
+      c-0.2-7.56-6.5-13.52-14.05-13.32c-7.27,0.2-13.12,6.05-13.32,13.32v6.21c-26.1,6.2-41.06,29.56-41.06,57.7v45.62l-18.25,18.22v9.12
+      h145.99v-9.12L154.42,133.82z M136.17,142.94h-73V88.23c0-22.63,13.78-41.06,36.49-41.06s36.49,18.44,36.49,41.06L136.17,142.94z"/>
+  </svg>
+    </div>
+    <div class="cart--promo-excel">¡Excelente!</div>
+  </div> 
+  <div class="cart--promo-right"><div class="cart--promo-display">
+    
+    {% if twobyone_count >= 1 %} 
+    <div id="promo-2x1">
+      {% assign value = twobyone_count | modulo:2 %}
+      {% if value != 0 %}
+        {% if twobyone_count >= 2  %}
+      <p>¡Muy bien! Ya tienes la promoción <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">Solares 2x1</a>, pero estás a 1 <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">Solares</a> de acceder de nuevo a la <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">promoción</a>.<br><small style="color:#f16731;">El descuento será aplicado al llegar al checkout</small></p>
+        {% else %}
+      <p><strong style="font-weight:600;">Te falta 1 producto</strong> para disfrutar de la promoción <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">Solares 2x1</a></p>
+        {% endif %}
+      {% else %}
+      <p>¡Felicidades! Ya se aplicará la promoción <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">Solares 2x1</a>{% if twobyone_count > 2 %} {{ twobyone_count | divided_by: 2 }} veces{% endif %}.
+      <br>Recuerda que puedes seguir agregando más modelos de <a href="https://masvision.mx/discount/2x1?redirect=/collections/solares-2x1">Solares 2x1</a> y acceder de nuevo a la promoción.
+      <br><small style="display:none; color:#f16731;">El descuento será aplicado al llegar al checkout</small></p>
+      {% endif %}  
+    </div>      
+    {% endif %}
+    
+    {% if item_count >= 1 %}
+      {% assign free_shipping = 90000 %}
+      {% assign total_cart = cart.total_price %}
+      <div id="shipping"><p>
+      {% if subscription_product == true %}Con tu suscripción los envíos ¡<span style="font-weight: bold;">SIEMPRE SON GRATIS</span>!
+      {% elsif cart.total_price >= 90000 %}¡Felicidades tienes <span style="font-weight: bold;">Envío GRATIS!</span>!{% else %}
+      {% assign faltante = free_shipping | minus: total_cart %}
+        ¡Sólo <span style="font-weight: bold;">te faltan {{ faltante | money }}</span> para tener <span style="font-weight: bold;">Envío GRATIS!</span>
+      {% endif %}</p>
+      </div>
+    
+      {% if subscription_product != true %}
+      <div id="oferta-financiera">
+        <p>Hasta <span style="font-weight: bold;">{% if cart.total_price >= 300000 %}9{% elsif cart.total_price >= 200000 %}6{% elsif cart.total_price <= 199999 %}3{% endif %} Meses sin Intereses</span> {% if cart.total_price <= 150000 %}<span>(monto mínimo para MSI: $1,500)</span>{% endif %}</p>
+      </div>
+      {% endif %}
+
+      {% if subscription_product == true %}  
+      <div id="suscripción">
+        <p>El descuento del <a href="https://masvision.mx/pages/programa-de-suscripcion">programa suscripción</a>, se verá reflejado en el checkout al finalizar su compra.</p>
+      </div>
+      {% endif %} 
+    {% endif %} 
+  </div></div> 
+</div>
+{% endif %}
