@@ -1,0 +1,41 @@
+{% if product.type != 'Lentes de Contacto' %}
+<style>
+  .benefits--container { margin:20px 0 10px 0; } 
+  .benefits--single { 
+    display:flex;
+    font-size: 13px;
+    color: #57606f;
+    align-items:center;
+    padding:5px 0;
+  }
+  .benefits--svg svg {
+    width: 12px;
+    max-height: 30px;
+    margin-right:7px;
+    fill: #57606f !important;
+  }
+  .benefits--svg .st0 {
+    fill: #57606f !important;
+  }
+</style>
+<div class="benefits--container">
+  {% if product.price >= 90000 %}
+  <div class="benefits--single">
+    <div class="benefits--svg">{% include 'check1.svg' %}</div>
+    <div class="benefits--txt">Envío Gratis</div>
+  </div>
+  {% endif %}
+  <div class="benefits--single">
+    <div class="benefits--svg">{% include 'check1.svg' %}</div>
+    <div class="benefits--txt">Compra Segura</div>
+  </div>
+  <div class="benefits--single">
+    <div class="benefits--svg">{% include 'check1.svg' %}</div>
+    <div class="benefits--txt">Compras a Meses sin Intereses</div>
+  </div>
+  <div class="benefits--single">
+    <div class="benefits--svg">{% include 'check1.svg' %}</div>
+    <div class="benefits--txt">Cupón de Primera Compra</div>
+  </div>
+</div>
+{% endif %}
