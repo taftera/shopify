@@ -31,6 +31,7 @@ To Do
 5. Product update with tag reading.
 6. External Invoice Creator
 7. Multi-line Announcement Bar
+8. Update sections to render within home/collection/page/product pages.
 
 ------
 
