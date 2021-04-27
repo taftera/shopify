@@ -1,0 +1,16 @@
+$.ajax({
+    type: "POST",
+    url: "/cart/add.js",
+    data: {
+        items: [{
+            quantity: 1,
+            id: '39412642906302'
+        }]
+    },
+    dataType: "json",
+    success: function(success) {
+       $('.site-actions-cart a').click();
+    },
+    error: function(error) {
+    }
+});
