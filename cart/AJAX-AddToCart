@@ -1,16 +1,24 @@
-$.ajax({
-    type: "POST",
-    url: "/cart/add.js",
-    data: {
-        items: [{
-            quantity: 1,
-            id: '39412642906302'
-        }]
-    },
-    dataType: "json",
-    success: function(success) {
-       $('.site-actions-cart a').click();
-    },
-    error: function(error) {
-    }
-});
+<a onclick="addToCartClick(40816711762110)">link</a>
+
+<script>
+      function addToCartClick(variantID) {
+        $.ajax({
+            type: "POST",
+            url: "/cart/add.js",
+            data: {
+                items: [{
+                    quantity: 1,
+                    id: variantID
+                }]
+            },
+            dataType: "json",
+            success: function(success) {
+              $('.site-actions-cart a').click();
+            },
+            error: function(error) {
+              console.log('Error, please report it to ecomm@graybox.co')
+              console.log(JSON.stringify(error));
+            }
+        });
+      }
+    </script>
